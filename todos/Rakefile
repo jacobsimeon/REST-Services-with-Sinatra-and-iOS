@@ -1,0 +1,8 @@
+#!/usr/bin/env rake
+require 'bundler/setup'
+require "bundler/gem_tasks"
+
+task :start do
+  require 'todos'
+  Todos::Server.run!
+end

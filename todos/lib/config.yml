@@ -1,0 +1,13 @@
+test:
+  adapter: postgres
+  database: todos_test
+  host: localhost
+  user: todos
+  password: '+0do$'
+
+development:
+  adapter: postgres
+  database: todos_development
+  host: localhost
+  user: todos
+  password: '+0do$'

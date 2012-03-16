@@ -16,4 +16,10 @@ Gem::Specification.new do |gem|
   gem.version       = Todos::VERSION
 
   gem.add_dependency 'sinatra'
+  gem.add_dependency 'sequel'
+  gem.add_dependency 'pg'
+  gem.add_development_dependency 'rack-test'
+  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'factory_girl'
+  gem.add_development_dependency 'shoulda'
 end

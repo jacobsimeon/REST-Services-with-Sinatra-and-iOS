@@ -1,8 +1,36 @@
 #!/usr/bin/env rake
+
 require 'bundler/setup'
 require "bundler/gem_tasks"
+require 'todos'
+
+ENV['TODOS_ENV'] ||= 'test'
 
 task :start do
-  require 'todos'
   Todos::Server.run!
+end
+
+task :test do
+  system "rspec spec"
+end
+
+namespace :db do
+
+  task :create do
+    system "createuser #{Todos.config['user']} -d -P"
+    system "createdb #{Todos.config['database']} -O #{Todos.config['user']}"
+  end
+
+  task :migrate do
+    system "sequel -m lib/todos/migrations postgres://127.0.0.1/#{Todos.config['database']}"  
+  end
+
+  task :reset do
+    require 'todos/models'
+    Todos.db.run "TRUNCATE TABLE contexts CASCADE"
+    Todos.db.run "TRUNCATE TABLE tasks CASCADE"
+    Todos.db.run "TRUNCATE TABLE projects CASCADE"
+    Rake::Task["db:migrate"].execute
+  end
+
 end

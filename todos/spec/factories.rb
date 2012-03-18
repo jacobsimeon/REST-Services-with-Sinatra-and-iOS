@@ -4,6 +4,9 @@ FactoryGirl.define do
     sequence :name do |i| 
       "Task ##{i}"
     end
+    factory :no_name do
+      name '' 
+    end
   end
 
   factory :task do
@@ -17,5 +20,4 @@ FactoryGirl.define do
       "Task ##{i}"
     end
   end
-
 end

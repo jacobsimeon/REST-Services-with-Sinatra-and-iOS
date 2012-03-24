@@ -55,7 +55,6 @@ The App
 
 The URIs (The UI)
 ----------------
-  - show and step through sinatra code
   
     ``` ruby
     get '/tasks' do
@@ -98,6 +97,28 @@ The URIs (The UI)
 The Client
 ---------------
   - introduce [RestKit][3]
+    [Task][6]
+    [Manager][5]
+    [Services][4]
+    
+    ``` objective-c
+      -(void)createObject:(NSObject *)theObject withMapping:(RKObjectMapping *)mapping{
+        self.target = theObject;
+        [[LBDataManager sharedManager].rkObjectManager 
+         postObject:theObject mapResponseWith:mapping delegate:self];
+      }
+
+      -(void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error{
+        [self.delegate objectDidFailCreation:error];
+        [super objectLoader:objectLoader didFailWithError:error];
+      }
+
+      -(void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)loadedObjects{
+        [self.delegate didCreateObject:[loadedObjects objectAtIndex:0]];
+        [super objectLoader:objectLoader didLoadObjects:loadedObjects];
+      }
+    ```
+  
   - Create a task
   - Read tasks
   - Update a task
@@ -110,3 +131,6 @@ Handling relationships
 [1]: http://en.wikipedia.org/wiki/Representational_state_transfer
 [2]: http://www.ics.uci.edu/~taylor/documents/2002-REST-TOIT.pdf
 [3]: http://restkit.org
+[4]: https://github.com/jacobsimeon/REST-Services-with-Sinatra-and-iOS/blob/master/client/Todo/Todo/LBCreateObjectService.m
+[5]: https://github.com/jacobsimeon/REST-Services-with-Sinatra-and-iOS/blob/master/client/Todo/Todo/LBDataManager.m
+[6]: https://github.com/jacobsimeon/REST-Services-with-Sinatra-and-iOS/blob/master/client/Todo/Todo/Task.m

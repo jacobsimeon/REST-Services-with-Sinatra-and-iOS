@@ -43,27 +43,65 @@ REST Communicates With __Resources__
     - 201 (Created)
     - 422 (Unprocessable Entity)
   - GET, PUT, DELETE, PATCH
-    - 200
-    - 404
+    - 200 (OK)
+    - 404 (NOT FOUND)
     
 ---
 
 The App
 -------
- - Todos application
- - CRUD tasks
+  - Todos application
+  - Manage tasks
 
 The URIs (The UI)
 ----------------
- (show and step through sinatra code)
+  - show and step through sinatra code
+  
+    ``` ruby
+    get '/tasks' do
+      Task.to_json
+    end 
+
+    post '/tasks' do
+      pp @data
+      @task = Task.new @data 
+      if @task.valid?
+        @task.save
+        @task.to_json
+      else
+        status 422 
+        @task.errors_hash.to_json
+      end 
+    end 
+
+    get '/tasks/:id' do
+      @task = Task.find(params)
+      raise Sinatra::NotFound unless @task
+      @task.to_json
+    end 
+
+    put '/tasks/:id' do
+      @task = Task.find :id => params[:id]
+      raise Sinatra::NotFound unless @task
+      @task.update @data
+      @task.to_json
+    end 
+
+    delete '/tasks/:id' do
+      @task = Task.find :id => params[:id]
+      raise Sinatra::NotFound unless @task
+      @task.destroy
+      @task.to_json
+    end
+    ```
    
 The Client
 ---------------
- (introduce RestKit)
- Create a few tasks
- Read tasks
- Update a task
- Destroy a task
+  - introduce [RestKit][3]
+  - Create a task
+  - Read tasks
+  - Update a task
+  - Destroy a task
 
 
 Questions/Discussion
@@ -71,5 +109,4 @@ Handling relationships
 
 [1]: http://en.wikipedia.org/wiki/Representational_state_transfer
 [2]: http://www.ics.uci.edu/~taylor/documents/2002-REST-TOIT.pdf
-
-  
+[3]: http://restkit.org

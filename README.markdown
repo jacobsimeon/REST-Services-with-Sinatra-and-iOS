@@ -96,10 +96,12 @@ end
    
 The Client
 ---------------
-  - introduce [RestKit][3]
-    [Task][6]
-    [Manager][5]
-    [Services][4]
+  - [RestKit][3]
+  - [Task][6]
+  - [Manager][5]
+
+[Services][4]
+------------
     
 ``` objC
   -(void)createObject:(NSObject *)theObject withMapping:(RKObjectMapping *)mapping{

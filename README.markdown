@@ -101,7 +101,7 @@ The Client
     [Manager][5]
     [Services][4]
     
-    ``` objective-c
+    ``` objc
       -(void)createObject:(NSObject *)theObject withMapping:(RKObjectMapping *)mapping{
         self.target = theObject;
         [[LBDataManager sharedManager].rkObjectManager 

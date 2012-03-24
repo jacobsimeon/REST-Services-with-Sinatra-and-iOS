@@ -56,43 +56,43 @@ The App
 The URIs (The UI)
 ----------------
   
-    ``` ruby
-    get '/tasks' do
-      Task.to_json
-    end 
+``` ruby
+get '/tasks' do
+  Task.to_json
+end 
 
-    post '/tasks' do
-      pp @data
-      @task = Task.new @data 
-      if @task.valid?
-        @task.save
-        @task.to_json
-      else
-        status 422 
-        @task.errors_hash.to_json
-      end 
-    end 
+post '/tasks' do
+  pp @data
+  @task = Task.new @data 
+  if @task.valid?
+    @task.save
+    @task.to_json
+  else
+    status 422 
+    @task.errors_hash.to_json
+  end 
+end 
 
-    get '/tasks/:id' do
-      @task = Task.find(params)
-      raise Sinatra::NotFound unless @task
-      @task.to_json
-    end 
+get '/tasks/:id' do
+  @task = Task.find(params)
+  raise Sinatra::NotFound unless @task
+  @task.to_json
+end 
 
-    put '/tasks/:id' do
-      @task = Task.find :id => params[:id]
-      raise Sinatra::NotFound unless @task
-      @task.update @data
-      @task.to_json
-    end 
+put '/tasks/:id' do
+  @task = Task.find :id => params[:id]
+  raise Sinatra::NotFound unless @task
+  @task.update @data
+  @task.to_json
+end 
 
-    delete '/tasks/:id' do
-      @task = Task.find :id => params[:id]
-      raise Sinatra::NotFound unless @task
-      @task.destroy
-      @task.to_json
-    end
-    ```
+delete '/tasks/:id' do
+  @task = Task.find :id => params[:id]
+  raise Sinatra::NotFound unless @task
+  @task.destroy
+  @task.to_json
+end
+```
    
 The Client
 ---------------
@@ -101,87 +101,88 @@ The Client
     [Manager][5]
     [Services][4]
     
-    ``` objC
-      -(void)createObject:(NSObject *)theObject withMapping:(RKObjectMapping *)mapping{
-        self.target = theObject;
-        [[LBDataManager sharedManager].rkObjectManager 
-         postObject:theObject mapResponseWith:mapping delegate:self];
-      }
+``` objC
+  -(void)createObject:(NSObject *)theObject withMapping:(RKObjectMapping *)mapping{
+    self.target = theObject;
+    [[LBDataManager sharedManager].rkObjectManager 
+     postObject:theObject mapResponseWith:mapping delegate:self];
+  }
 
-      -(void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error{
-        [self.delegate objectDidFailCreation:error];
-        [super objectLoader:objectLoader didFailWithError:error];
-      }
+  -(void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error{
+    [self.delegate objectDidFailCreation:error];
+    [super objectLoader:objectLoader didFailWithError:error];
+  }
 
-      -(void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)loadedObjects{
-        [self.delegate didCreateObject:[loadedObjects objectAtIndex:0]];
-        [super objectLoader:objectLoader didLoadObjects:loadedObjects];
-      }
-    ```
+  -(void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)loadedObjects{
+    [self.delegate didCreateObject:[loadedObjects objectAtIndex:0]];
+    [super objectLoader:objectLoader didLoadObjects:loadedObjects];
+  }
+```
   
 Create a task
 -------------
 
-  ``` objC
-  -(void)saveTask{
-    [[LBCreateObjectService serviceWithDelegate:self] 
-     createObject:self.task 
-     withMapping:[Task serializationMapping]];
-  }
+``` objC
+-(void)saveTask{
+  [[LBCreateObjectService serviceWithDelegate:self] 
+   createObject:self.task 
+   withMapping:[Task serializationMapping]];
+}
 
-  -(void)didCreateObject:(NSObject *)theObject{
-    [self.delegate taskFormView:self didSaveTask:self.task];
-  }
+-(void)didCreateObject:(NSObject *)theObject{
+  [self.delegate taskFormView:self didSaveTask:self.task];
+}
 
-  -(void)objectDidFailCreation:(NSError *)error{
-    [[[UIAlertView alloc] initWithTitle:@"Error" 
-                                message:error.localizedDescription 
-                               delegate:self 
-                      cancelButtonTitle:@"Ok" 
-                      otherButtonTitles: nil] show];
-  }
-  ```
+-(void)objectDidFailCreation:(NSError *)error{
+  [[[UIAlertView alloc] initWithTitle:@"Error" 
+                              message:error.localizedDescription 
+                             delegate:self 
+                    cancelButtonTitle:@"Ok" 
+                    otherButtonTitles: nil] show];
+}
+```
 
 Read tasks
 ----------
 
-  ``` objC
-  -(void)loadData{
-    [[LBReadObjectService serviceWithDelegate:self] readObjectsForMapping:[Task mapping] atPath:@"tasks"];
-  }
+``` objC
+-(void)loadData{
+  [[LBReadObjectService serviceWithDelegate:self] readObjectsForMapping:[Task mapping] atPath:@"tasks"];
+}
 
-  -(void)readObjectService:(LBReadObjectService *)service didReadObjects:(NSArray *)objects{
-    self.tasks = objects; 
-    [self.tableView reloadData];
-  }
-  ```
+-(void)readObjectService:(LBReadObjectService *)service didReadObjects:(NSArray *)objects{
+  self.tasks = objects; 
+  [self.tableView reloadData];
+}
+```
 
 Update a task
 -------------
-  ``` objC
-  -(void)updateTask{
-    [[LBUpdateObjectService serviceWithDelegate:self] 
-     updateObject:self.task
-     withMapping:[Task serializationMapping]];
-  }
-  
-  -(void)didUpdateObject:(NSObject *)target{
-    [self.delegate taskFormView:self didSaveTask:self.task];
-  }
-  ```
+
+``` objC
+-(void)updateTask{
+  [[LBUpdateObjectService serviceWithDelegate:self] 
+   updateObject:self.task
+   withMapping:[Task serializationMapping]];
+}
+
+-(void)didUpdateObject:(NSObject *)target{
+  [self.delegate taskFormView:self didSaveTask:self.task];
+}
+```
 
 
 Destroy a task
 --------------
 
-  ``` objC
-  -(void)deleteTask{
-    [[LBDeleteObjectService serviceWithDelegate:self] deleteObject:self.task];
-  }
-  -(void)didDeleteObject:(NSObject *)target{
-    [self.navigationController popViewControllerAnimated:YES];
-  }
-  ```
+``` objC
+-(void)deleteTask{
+  [[LBDeleteObjectService serviceWithDelegate:self] deleteObject:self.task];
+}
+-(void)didDeleteObject:(NSObject *)target{
+  [self.navigationController popViewControllerAnimated:YES];
+}
+```
 
 ---
 

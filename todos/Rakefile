@@ -18,8 +18,7 @@ end
 namespace :db do
 
   task :create do
-    system "createuser #{Todos.config['user']} -d -P"
-    system "createdb #{Todos.config['database']} -O #{Todos.config['user']}"
+    system "createdb #{Todos.config['database']}"
   end
 
   task :migrate do

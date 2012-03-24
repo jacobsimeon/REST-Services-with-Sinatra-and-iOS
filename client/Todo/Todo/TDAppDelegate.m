@@ -8,7 +8,7 @@
 
 #import "TDAppDelegate.h"
 #import "TDProjectsViewController.h"
-#import "TDContextsViewController.h"
+#import <RestKit/RestKit.h>
 
 @implementation TDAppDelegate
 
@@ -17,13 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  // Override point for customization after application launch.
-  UIViewController *viewController1 = [[TDProjectsViewController alloc] initWithNibName:@"TDProjectsViewController" bundle:nil];
-  UIViewController *viewController2 = [[TDContextsViewController alloc] initWithNibName:@"TDContextsViewController" bundle:nil];
-  self.tabBarController = [[UITabBarController alloc] init];
-  self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
-  self.window.rootViewController = self.tabBarController;
+  [RKObjectManager objectManagerWithBaseURL:@"http://localhost:4567"];
   [self.window makeKeyAndVisible];
   return YES;
 }

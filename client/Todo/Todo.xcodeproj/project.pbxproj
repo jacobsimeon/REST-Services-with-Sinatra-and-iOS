@@ -7,23 +7,92 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A127E6AE151D5D090037DB08 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = A127E6AD151D5D090037DB08 /* Task.m */; };
+		A127E708151D653F0037DB08 /* LBRestfulService.m in Sources */ = {isa = PBXBuildFile; fileRef = A127E706151D653F0037DB08 /* LBRestfulService.m */; };
+		A127E711151D65600037DB08 /* LBCreateObjectService.m in Sources */ = {isa = PBXBuildFile; fileRef = A127E70A151D65600037DB08 /* LBCreateObjectService.m */; };
+		A127E712151D65600037DB08 /* LBDeleteObjectService.m in Sources */ = {isa = PBXBuildFile; fileRef = A127E70C151D65600037DB08 /* LBDeleteObjectService.m */; };
+		A127E713151D65600037DB08 /* LBReadObjectService.m in Sources */ = {isa = PBXBuildFile; fileRef = A127E70E151D65600037DB08 /* LBReadObjectService.m */; };
+		A127E714151D65600037DB08 /* LBUpdateObjectService.m in Sources */ = {isa = PBXBuildFile; fileRef = A127E710151D65600037DB08 /* LBUpdateObjectService.m */; };
+		A127E717151D661E0037DB08 /* LBDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A127E716151D661E0037DB08 /* LBDataManager.m */; };
 		A12BB0AE15167F87008B34BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12BB0AD15167F87008B34BB /* UIKit.framework */; };
 		A12BB0B015167F87008B34BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12BB0AF15167F87008B34BB /* Foundation.framework */; };
 		A12BB0B215167F87008B34BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12BB0B115167F87008B34BB /* CoreGraphics.framework */; };
 		A12BB0B815167F87008B34BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A12BB0B615167F87008B34BB /* InfoPlist.strings */; };
 		A12BB0BA15167F87008B34BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A12BB0B915167F87008B34BB /* main.m */; };
 		A12BB0BE15167F87008B34BB /* TDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A12BB0BD15167F87008B34BB /* TDAppDelegate.m */; };
-		A12BB0C115167F87008B34BB /* TDProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A12BB0C015167F87008B34BB /* TDProjectsViewController.m */; };
-		A12BB0C815167F87008B34BB /* TDContextsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A12BB0C715167F87008B34BB /* TDContextsViewController.m */; };
-		A12BB0CF15167F87008B34BB /* TDProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12BB0CD15167F87008B34BB /* TDProjectsViewController.xib */; };
-		A12BB0D215167F87008B34BB /* TDContextsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12BB0D015167F87008B34BB /* TDContextsViewController.xib */; };
 		A12BB11B15168304008B34BB /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A12BB11715168304008B34BB /* circle.png */; };
 		A12BB11C15168304008B34BB /* circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A12BB11815168304008B34BB /* circle@2x.png */; };
 		A12BB11D15168304008B34BB /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = A12BB11915168304008B34BB /* square.png */; };
 		A12BB11E15168304008B34BB /* square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A12BB11A15168304008B34BB /* square@2x.png */; };
+		A12BB12015168403008B34BB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12BB11F15168403008B34BB /* CFNetwork.framework */; };
+		A12BB1221516840D008B34BB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12BB1211516840D008B34BB /* CoreData.framework */; };
+		A12BB1241516841A008B34BB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12BB1231516841A008B34BB /* Security.framework */; };
+		A12BB12615168421008B34BB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12BB12515168421008B34BB /* MobileCoreServices.framework */; };
+		A12BB1281516842B008B34BB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12BB1271516842A008B34BB /* SystemConfiguration.framework */; };
+		A12BB12A15168443008B34BB /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A12BB12915168443008B34BB /* libxml2.dylib */; };
+		A12BB13F15168486008B34BB /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A12BB13615168477008B34BB /* libRestKit.a */; };
+		A198BED8151C358A000AE56B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A198BED7151C358A000AE56B /* MainWindow.xib */; };
+		A198BEE8151C429A000AE56B /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A198BEE6151C429A000AE56B /* TaskViewController.m */; };
+		A198BEE9151C429A000AE56B /* TaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A198BEE7151C429A000AE56B /* TaskViewController.xib */; };
+		A198BEED151C4424000AE56B /* TaskFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = A198BEEB151C4423000AE56B /* TaskFormView.m */; };
+		A198BEEE151C4424000AE56B /* TaskFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A198BEEC151C4424000AE56B /* TaskFormView.xib */; };
+		A198BEF6151C50EE000AE56B /* TaskDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = A198BEF4151C50EE000AE56B /* TaskDetailsView.m */; };
+		A198BEF7151C50EE000AE56B /* TaskDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A198BEF5151C50EE000AE56B /* TaskDetailsView.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A12BB13515168477008B34BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A12BB12B15168476008B34BB /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		A12BB13715168477008B34BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A12BB12B15168476008B34BB /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		A12BB13915168477008B34BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A12BB12B15168476008B34BB /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		A12BB13B15168477008B34BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A12BB12B15168476008B34BB /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		A12BB13D15168480008B34BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A12BB12B15168476008B34BB /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A127E6AC151D5D090037DB08 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		A127E6AD151D5D090037DB08 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		A127E706151D653F0037DB08 /* LBRestfulService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBRestfulService.m; sourceTree = "<group>"; };
+		A127E707151D653F0037DB08 /* LBRestfulService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBRestfulService.h; sourceTree = "<group>"; };
+		A127E709151D65600037DB08 /* LBCreateObjectService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBCreateObjectService.h; sourceTree = "<group>"; };
+		A127E70A151D65600037DB08 /* LBCreateObjectService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBCreateObjectService.m; sourceTree = "<group>"; };
+		A127E70B151D65600037DB08 /* LBDeleteObjectService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBDeleteObjectService.h; sourceTree = "<group>"; };
+		A127E70C151D65600037DB08 /* LBDeleteObjectService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBDeleteObjectService.m; sourceTree = "<group>"; };
+		A127E70D151D65600037DB08 /* LBReadObjectService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBReadObjectService.h; sourceTree = "<group>"; };
+		A127E70E151D65600037DB08 /* LBReadObjectService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBReadObjectService.m; sourceTree = "<group>"; };
+		A127E70F151D65600037DB08 /* LBUpdateObjectService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBUpdateObjectService.h; sourceTree = "<group>"; };
+		A127E710151D65600037DB08 /* LBUpdateObjectService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBUpdateObjectService.m; sourceTree = "<group>"; };
+		A127E715151D661E0037DB08 /* LBDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBDataManager.h; sourceTree = "<group>"; };
+		A127E716151D661E0037DB08 /* LBDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBDataManager.m; sourceTree = "<group>"; };
 		A12BB0A915167F87008B34BB /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12BB0AD15167F87008B34BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A12BB0AF15167F87008B34BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -34,16 +103,27 @@
 		A12BB0BB15167F87008B34BB /* Todo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Todo-Prefix.pch"; sourceTree = "<group>"; };
 		A12BB0BC15167F87008B34BB /* TDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDAppDelegate.h; sourceTree = "<group>"; };
 		A12BB0BD15167F87008B34BB /* TDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDAppDelegate.m; sourceTree = "<group>"; };
-		A12BB0BF15167F87008B34BB /* TDProjectsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDProjectsViewController.h; sourceTree = "<group>"; };
-		A12BB0C015167F87008B34BB /* TDProjectsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDProjectsViewController.m; sourceTree = "<group>"; };
-		A12BB0C615167F87008B34BB /* TDContextsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDContextsViewController.h; sourceTree = "<group>"; };
-		A12BB0C715167F87008B34BB /* TDContextsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDContextsViewController.m; sourceTree = "<group>"; };
-		A12BB0CE15167F87008B34BB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TDProjectsViewController.xib; sourceTree = "<group>"; };
-		A12BB0D115167F87008B34BB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TDContextsViewController.xib; sourceTree = "<group>"; };
 		A12BB11715168304008B34BB /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		A12BB11815168304008B34BB /* circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle@2x.png"; sourceTree = "<group>"; };
 		A12BB11915168304008B34BB /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
 		A12BB11A15168304008B34BB /* square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square@2x.png"; sourceTree = "<group>"; };
+		A12BB11F15168403008B34BB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A12BB1211516840D008B34BB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A12BB1231516841A008B34BB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A12BB12515168421008B34BB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A12BB1271516842A008B34BB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A12BB12915168443008B34BB /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		A12BB12B15168476008B34BB /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		A198BED7151C358A000AE56B /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		A198BEE5151C429A000AE56B /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
+		A198BEE6151C429A000AE56B /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
+		A198BEE7151C429A000AE56B /* TaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskViewController.xib; sourceTree = "<group>"; };
+		A198BEEA151C4423000AE56B /* TaskFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskFormView.h; sourceTree = "<group>"; };
+		A198BEEB151C4423000AE56B /* TaskFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskFormView.m; sourceTree = "<group>"; };
+		A198BEEC151C4424000AE56B /* TaskFormView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskFormView.xib; sourceTree = "<group>"; };
+		A198BEF3151C50EE000AE56B /* TaskDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskDetailsView.h; sourceTree = "<group>"; };
+		A198BEF4151C50EE000AE56B /* TaskDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskDetailsView.m; sourceTree = "<group>"; };
+		A198BEF5151C50EE000AE56B /* TaskDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskDetailsView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +131,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12BB13F15168486008B34BB /* libRestKit.a in Frameworks */,
+				A12BB12A15168443008B34BB /* libxml2.dylib in Frameworks */,
+				A12BB1281516842B008B34BB /* SystemConfiguration.framework in Frameworks */,
+				A12BB12615168421008B34BB /* MobileCoreServices.framework in Frameworks */,
+				A12BB1241516841A008B34BB /* Security.framework in Frameworks */,
+				A12BB1221516840D008B34BB /* CoreData.framework in Frameworks */,
+				A12BB12015168403008B34BB /* CFNetwork.framework in Frameworks */,
 				A12BB0AE15167F87008B34BB /* UIKit.framework in Frameworks */,
 				A12BB0B015167F87008B34BB /* Foundation.framework in Frameworks */,
 				A12BB0B215167F87008B34BB /* CoreGraphics.framework in Frameworks */,
@@ -60,6 +147,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A127E6F6151D63B50037DB08 /* REST Support */ = {
+			isa = PBXGroup;
+			children = (
+				A127E715151D661E0037DB08 /* LBDataManager.h */,
+				A127E716151D661E0037DB08 /* LBDataManager.m */,
+				A127E709151D65600037DB08 /* LBCreateObjectService.h */,
+				A127E70A151D65600037DB08 /* LBCreateObjectService.m */,
+				A127E70B151D65600037DB08 /* LBDeleteObjectService.h */,
+				A127E70C151D65600037DB08 /* LBDeleteObjectService.m */,
+				A127E70D151D65600037DB08 /* LBReadObjectService.h */,
+				A127E70E151D65600037DB08 /* LBReadObjectService.m */,
+				A127E70F151D65600037DB08 /* LBUpdateObjectService.h */,
+				A127E710151D65600037DB08 /* LBUpdateObjectService.m */,
+				A127E706151D653F0037DB08 /* LBRestfulService.m */,
+				A127E707151D653F0037DB08 /* LBRestfulService.h */,
+			);
+			name = "REST Support";
+			sourceTree = "<group>";
+		};
 		A12BB09E15167F87008B34BB = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +186,13 @@
 		A12BB0AC15167F87008B34BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A12BB12915168443008B34BB /* libxml2.dylib */,
+				A12BB12B15168476008B34BB /* RestKit.xcodeproj */,
+				A12BB1271516842A008B34BB /* SystemConfiguration.framework */,
+				A12BB12515168421008B34BB /* MobileCoreServices.framework */,
+				A12BB1231516841A008B34BB /* Security.framework */,
+				A12BB1211516840D008B34BB /* CoreData.framework */,
+				A12BB11F15168403008B34BB /* CFNetwork.framework */,
 				A12BB0AD15167F87008B34BB /* UIKit.framework */,
 				A12BB0AF15167F87008B34BB /* Foundation.framework */,
 				A12BB0B115167F87008B34BB /* CoreGraphics.framework */,
@@ -90,12 +203,14 @@
 		A12BB0B315167F87008B34BB /* Todo */ = {
 			isa = PBXGroup;
 			children = (
-				A12BB0DC151682CF008B34BB /* Resources */,
-				A12BB0D915168142008B34BB /* Views */,
+				A127E6F6151D63B50037DB08 /* REST Support */,
 				A12BB0D81516813C008B34BB /* Models */,
+				A12BB0D915168142008B34BB /* Views */,
 				A12BB0BC15167F87008B34BB /* TDAppDelegate.h */,
 				A12BB0BD15167F87008B34BB /* TDAppDelegate.m */,
 				A12BB0B415167F87008B34BB /* Supporting Files */,
+				A12BB0DC151682CF008B34BB /* Resources */,
+				A198BED7151C358A000AE56B /* MainWindow.xib */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -114,6 +229,8 @@
 		A12BB0D81516813C008B34BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A127E6AC151D5D090037DB08 /* Task.h */,
+				A127E6AD151D5D090037DB08 /* Task.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -121,30 +238,9 @@
 		A12BB0D915168142008B34BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A12BB0DB15168159008B34BB /* Projects */,
-				A12BB0DA15168152008B34BB /* Contexts */,
+				A198BEDF151C4248000AE56B /* Tasks */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		A12BB0DA15168152008B34BB /* Contexts */ = {
-			isa = PBXGroup;
-			children = (
-				A12BB0C615167F87008B34BB /* TDContextsViewController.h */,
-				A12BB0C715167F87008B34BB /* TDContextsViewController.m */,
-				A12BB0D015167F87008B34BB /* TDContextsViewController.xib */,
-			);
-			name = Contexts;
-			sourceTree = "<group>";
-		};
-		A12BB0DB15168159008B34BB /* Projects */ = {
-			isa = PBXGroup;
-			children = (
-				A12BB0BF15167F87008B34BB /* TDProjectsViewController.h */,
-				A12BB0C015167F87008B34BB /* TDProjectsViewController.m */,
-				A12BB0CD15167F87008B34BB /* TDProjectsViewController.xib */,
-			);
-			name = Projects;
 			sourceTree = "<group>";
 		};
 		A12BB0DC151682CF008B34BB /* Resources */ = {
@@ -156,6 +252,57 @@
 				A12BB11A15168304008B34BB /* square@2x.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		A12BB12C15168476008B34BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A12BB13615168477008B34BB /* libRestKit.a */,
+				A12BB13815168477008B34BB /* RestKitTests.octest */,
+				A12BB13A15168477008B34BB /* RestKit.framework */,
+				A12BB13C15168477008B34BB /* RestKitFrameworkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A198BEDF151C4248000AE56B /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				A198BEF0151C5036000AE56B /* List */,
+				A198BEF2151C5059000AE56B /* Details */,
+				A198BEF1151C5044000AE56B /* New/Edit */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		A198BEF0151C5036000AE56B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				A198BEE5151C429A000AE56B /* TaskViewController.h */,
+				A198BEE6151C429A000AE56B /* TaskViewController.m */,
+				A198BEE7151C429A000AE56B /* TaskViewController.xib */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		A198BEF1151C5044000AE56B /* New/Edit */ = {
+			isa = PBXGroup;
+			children = (
+				A198BEEA151C4423000AE56B /* TaskFormView.h */,
+				A198BEEB151C4423000AE56B /* TaskFormView.m */,
+				A198BEEC151C4424000AE56B /* TaskFormView.xib */,
+			);
+			name = New/Edit;
+			sourceTree = "<group>";
+		};
+		A198BEF2151C5059000AE56B /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A198BEF3151C50EE000AE56B /* TaskDetailsView.h */,
+				A198BEF4151C50EE000AE56B /* TaskDetailsView.m */,
+				A198BEF5151C50EE000AE56B /* TaskDetailsView.xib */,
+			);
+			name = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +319,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A12BB13E15168480008B34BB /* PBXTargetDependency */,
 			);
 			name = Todo;
 			productName = Todo;
@@ -197,6 +345,12 @@
 			mainGroup = A12BB09E15167F87008B34BB;
 			productRefGroup = A12BB0AA15167F87008B34BB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A12BB12C15168476008B34BB /* Products */;
+					ProjectRef = A12BB12B15168476008B34BB /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A12BB0A815167F87008B34BB /* Todo */,
@@ -204,18 +358,51 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A12BB13615168477008B34BB /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = A12BB13515168477008B34BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A12BB13815168477008B34BB /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = A12BB13715168477008B34BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A12BB13A15168477008B34BB /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = A12BB13915168477008B34BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A12BB13C15168477008B34BB /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = A12BB13B15168477008B34BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		A12BB0A715167F87008B34BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A12BB0B815167F87008B34BB /* InfoPlist.strings in Resources */,
-				A12BB0CF15167F87008B34BB /* TDProjectsViewController.xib in Resources */,
-				A12BB0D215167F87008B34BB /* TDContextsViewController.xib in Resources */,
 				A12BB11B15168304008B34BB /* circle.png in Resources */,
 				A12BB11C15168304008B34BB /* circle@2x.png in Resources */,
 				A12BB11D15168304008B34BB /* square.png in Resources */,
 				A12BB11E15168304008B34BB /* square@2x.png in Resources */,
+				A198BED8151C358A000AE56B /* MainWindow.xib in Resources */,
+				A198BEE9151C429A000AE56B /* TaskViewController.xib in Resources */,
+				A198BEEE151C4424000AE56B /* TaskFormView.xib in Resources */,
+				A198BEF7151C50EE000AE56B /* TaskDetailsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,12 +415,28 @@
 			files = (
 				A12BB0BA15167F87008B34BB /* main.m in Sources */,
 				A12BB0BE15167F87008B34BB /* TDAppDelegate.m in Sources */,
-				A12BB0C115167F87008B34BB /* TDProjectsViewController.m in Sources */,
-				A12BB0C815167F87008B34BB /* TDContextsViewController.m in Sources */,
+				A198BEE8151C429A000AE56B /* TaskViewController.m in Sources */,
+				A198BEED151C4424000AE56B /* TaskFormView.m in Sources */,
+				A198BEF6151C50EE000AE56B /* TaskDetailsView.m in Sources */,
+				A127E6AE151D5D090037DB08 /* Task.m in Sources */,
+				A127E708151D653F0037DB08 /* LBRestfulService.m in Sources */,
+				A127E711151D65600037DB08 /* LBCreateObjectService.m in Sources */,
+				A127E712151D65600037DB08 /* LBDeleteObjectService.m in Sources */,
+				A127E713151D65600037DB08 /* LBReadObjectService.m in Sources */,
+				A127E714151D65600037DB08 /* LBUpdateObjectService.m in Sources */,
+				A127E717151D661E0037DB08 /* LBDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A12BB13E15168480008B34BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = A12BB13D15168480008B34BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A12BB0B615167F87008B34BB /* InfoPlist.strings */ = {
@@ -244,22 +447,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A12BB0CD15167F87008B34BB /* TDProjectsViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A12BB0CE15167F87008B34BB /* en */,
-			);
-			name = TDProjectsViewController.xib;
-			sourceTree = "<group>";
-		};
-		A12BB0D015167F87008B34BB /* TDContextsViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A12BB0D115167F87008B34BB /* en */,
-			);
-			name = TDContextsViewController.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -268,7 +455,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -284,6 +471,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -293,7 +484,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -303,6 +494,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -349,6 +544,7 @@
 				A12BB0D715167F87008B34BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

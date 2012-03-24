@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LBReadObjectService.h"
+#import "AddProjectViewController.h"
 
-@interface TDProjectsViewController : UIViewController
+@interface TDProjectsViewController : UITableViewController<
+  UITableViewDataSource, 
+  UITableViewDelegate,
+  LBReadObjectsDelegate,
+  AddProjectDelegate
+>
 
+@property (nonatomic, retain) NSArray *projects;
+
+-(IBAction)addProject:(id)sender;
 @end

@@ -3,14 +3,11 @@ REST Services with Sinatra and iOS
 
 What is REST?
 -------------
-
-  - [Wikipedia][1]:
+  [Wikipedia][1]:
+  >"Representational state transfer (REST) is a style of software architecture for distributed hypermedia systems such as the World Wide Web."
   
-  "Representational state transfer (REST) is a style of software architecture for distributed hypermedia systems such as the World Wide Web."
-
-  - [Represenational State Transfer][2] (Roy Felding):
-  
-  "REST is a coordinated set of architectural constraints that attempts to minimize latency and network communication, while at the same time maximizing the independence and scalability of component implementations."
+  [Represenational State Transfer][2] (Roy Felding):
+  >"REST is a coordinated set of architectural constraints that attempts to minimize latency and network communication, while at the same time maximizing the independence and scalability of component implementations."
   
 REST is a set of Constraints
 ----------------------------

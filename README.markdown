@@ -101,7 +101,7 @@ The Client
     [Manager][5]
     [Services][4]
     
-    ``` objc
+    ``` objC
       -(void)createObject:(NSObject *)theObject withMapping:(RKObjectMapping *)mapping{
         self.target = theObject;
         [[LBDataManager sharedManager].rkObjectManager 
@@ -119,13 +119,74 @@ The Client
       }
     ```
   
-  - Create a task
-  - Read tasks
-  - Update a task
-  - Destroy a task
+Create a task
+-------------
 
+  ``` objC
+  -(void)saveTask{
+    [[LBCreateObjectService serviceWithDelegate:self] 
+     createObject:self.task 
+     withMapping:[Task serializationMapping]];
+  }
+
+  -(void)didCreateObject:(NSObject *)theObject{
+    [self.delegate taskFormView:self didSaveTask:self.task];
+  }
+
+  -(void)objectDidFailCreation:(NSError *)error{
+    [[[UIAlertView alloc] initWithTitle:@"Error" 
+                                message:error.localizedDescription 
+                               delegate:self 
+                      cancelButtonTitle:@"Ok" 
+                      otherButtonTitles: nil] show];
+  }
+  ```
+
+Read tasks
+----------
+
+  ``` objC
+  -(void)loadData{
+    [[LBReadObjectService serviceWithDelegate:self] readObjectsForMapping:[Task mapping] atPath:@"tasks"];
+  }
+
+  -(void)readObjectService:(LBReadObjectService *)service didReadObjects:(NSArray *)objects{
+    self.tasks = objects; 
+    [self.tableView reloadData];
+  }
+  ```
+
+Update a task
+-------------
+  ``` objC
+  -(void)updateTask{
+    [[LBUpdateObjectService serviceWithDelegate:self] 
+     updateObject:self.task
+     withMapping:[Task serializationMapping]];
+  }
+  
+  -(void)didUpdateObject:(NSObject *)target{
+    [self.delegate taskFormView:self didSaveTask:self.task];
+  }
+  ```
+
+
+Destroy a task
+--------------
+
+  ``` objC
+  -(void)deleteTask{
+    [[LBDeleteObjectService serviceWithDelegate:self] deleteObject:self.task];
+  }
+  -(void)didDeleteObject:(NSObject *)target{
+    [self.navigationController popViewControllerAnimated:YES];
+  }
+  ```
+
+---
 
 Questions/Discussion
+--------------------
 Handling relationships
 
 [1]: http://en.wikipedia.org/wiki/Representational_state_transfer
